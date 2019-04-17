@@ -22,7 +22,7 @@
 #define MSG_299 "299 File %s size %ld bytes\r\n"
 #define MSG_226 "226 Transfer complete\r\n"
 
-/**
+/***
  * function: receive the commands from the client
  * sd: socket descriptor
  * operation: \0 if you want to know the operation received
@@ -33,7 +33,7 @@
  *         ex: for login you need the seq USER PASS
  *             you can check if you receive first USER
  *             and then check if you receive PASS
- **/
+ ***/
 bool recv_cmd(int sd, char *operation, char *param) {
     char buffer[BUFSIZE], *token;
     int recv_s;
